@@ -19,10 +19,10 @@ jobs:
     - name: Build project
       run: mvn clean install
     - name: Login Docker Hub
-      run: docker login -u ${{secrets.DOCKER_USER }} -p ${{secrets.DOCKER_PASSWORD}}
+      run: docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
     - name: Build docker image
       run: docker build -t gabrielmerds/todolist-challenge .
-    - name: Push docker image
+    - name: Push image docker
       run: docker push gabrielmerds/todolist-challenge
 
 
